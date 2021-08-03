@@ -21,3 +21,9 @@ arc deploy
 ## view logs for uploads
 
 arc logs ./src/http/post-upload
+
+## Caveats
+
+This does not account for multi-tenancy - ie if multiple clients are uploading images at once they will overwrite each other. Come up with a unique naming convention and grouping strategy to "keep images together" to mitigate this, and delete them when it's done.
+
+This also does not perform cleanup. Cleanup happens when the container goes down, however if you have a hot lambda and allow lots of uploads it will probably get overwhelmed eventually. Simply clean up the images when you're done.

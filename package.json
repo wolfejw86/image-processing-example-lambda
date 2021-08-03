@@ -1,0 +1,16 @@
+{
+  "name": "arc-image-processor",
+  "version": "0.0.0",
+  "description": "A fresh new Architect project!",
+  "scripts": {
+    "start": "npx sandbox"
+  },
+  "devDependencies": {
+    "@architect/architect": "^9.0.0"
+  },
+  "dependencies": {
+    "@architect/functions": "^4.0.0",
+    "aws-sdk": "^2.959.0",
+    "gm": "^1.23.1"
+  }
+}

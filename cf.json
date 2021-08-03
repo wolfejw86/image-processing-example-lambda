@@ -1,0 +1,32 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Outputs": {
+    "LayerVersion": {
+      "Description": "Layer ARN Reference",
+      "Value": {
+        "Ref": "ImageMagickLayerf56f7c44ba"
+      }
+    }
+  },
+  "Description": "Static build of ImageMagick for Amazon Linux 2, including convert, mogrify and identify tools and support for jpeg, gif, png, tiff and webm formats.\nCheck out https://github.com/serverlesspub/imagemagick-aws-lambda-2 for more information.\n",
+  "Resources": {
+    "ImageMagickLayerf56f7c44ba": {
+      "DeletionPolicy": "Retain",
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "Content": {
+          "S3Bucket": "awsserverlessrepo-changesets-plntc6bfnfj",
+          "S3Key": "742079469910/arn:aws:serverlessrepo:us-east-1:145266761615:applications-image-magick-lambda-layer-versions-1.0.0/cc8f7984-1453-4338-826b-536d2127e3f5"
+        },
+        "LayerName": "image-magick",
+        "Description": "Static build of ImageMagick for AWS Linux 2,",
+        "LicenseInfo": "https://imagemagick.org/script/license.php",
+        "CompatibleRuntimes": [
+          "nodejs10.x",
+          "nodejs12.x",
+          "nodejs14.x"
+        ]
+      }
+    }
+  }
+}
